@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,700i,900,900i&display=swap');
 @import "~bootstrap-4-grid/css/grid.min.css";
-@import "variables";
+
+@import "./variables";
+
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 
 body {
   margin: 0;
@@ -9,4 +16,9 @@ body {
   max-height: 100vh;
   background: $color-base;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: 'SevenSegment';
+  src: url(/assets/fonts/SevenSegment.ttf);
 }

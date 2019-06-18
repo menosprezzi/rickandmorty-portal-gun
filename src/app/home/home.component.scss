@@ -1,3 +1,4 @@
+@import "~bootstrap-4-grid/scss/grid";
 @import "../../variables";
 
 .page__search-container {
@@ -26,7 +27,9 @@
 }
 
 .page__portal {
-  position: relative;
+  position: absolute;
+  top: -160px;
+  left: calc(50% - 150px);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -55,5 +58,32 @@
       box-shadow: 0 0 5px 0 $color-portal,
       0 0 5px 0 $color-portal inset;
     }
+  }
+}
+
+.page__location-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 158px 0px 8px 0px;
+  padding: 108px 8px 8px 8px;
+  border-radius: 4px;
+  background: $color-black;
+  color: white;
+
+  h1 {
+    color: $color-digital-green;
+    text-align: center;
+    font-family: 'SevenSegment', sans-serif;
+  }
+
+  span {
+    color: $color-digital-green;
+    font-family: 'SevenSegment', sans-serif;
+  }
+
+  @include media-breakpoint-up("md") {
+    padding: 116px 16px 16px 16px;
   }
 }
