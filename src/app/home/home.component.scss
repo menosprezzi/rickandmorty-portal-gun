@@ -1,0 +1,59 @@
+@import "../../variables";
+
+.page__search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  .search-container__bar {
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    max-width: 430px;
+    height: 40px;
+    border-radius: 20px;
+    background: #E0E0E0;
+
+    input {
+      width: 100%;
+      min-height: 100%;
+      font-size: 20px;
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+  }
+}
+
+.page__portal {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  .portal__preview {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid $color-portal;
+    border-radius: 100%;
+    background-position: 50% 50%;
+    box-shadow: 0 0 5px 0 $color-portal,
+                0 0 5px 0 $color-portal inset;
+    animation: portal__glow 1s ease-in infinite alternate-reverse;
+  }
+
+  @keyframes portal__glow {
+    from {
+      background-size: auto 205px; // será?
+      box-shadow: 0 0 10px 5px $color-portal,
+      0 0 10px 5px $color-portal inset;
+    }
+    to {
+      background-size: auto 200px;
+      box-shadow: 0 0 5px 0 $color-portal,
+      0 0 5px 0 $color-portal inset;
+    }
+  }
+}
